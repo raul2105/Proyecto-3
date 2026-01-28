@@ -1,0 +1,16 @@
+{
+    "name": "Test",
+    "client": "",
+    "job_number": "",
+    "camera_id": 0,
+    "exposure": -5.0,
+    "master_file": "recipes/master_Test.png",
+    "web_width_mm": 330.0,
+    "lane_count": 4,
+    "rois": [],
+    "defect_thresholds": {
+        "min_area": 50.0,
+        "sensitivity": 95.0
+    },
+    "color_targets": []
+}

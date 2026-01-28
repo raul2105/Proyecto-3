@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "use_simulator": true,
+    "camera_id": 1,
+    "exposure": -5.0,
+    "gain": null,
+    "roll_diameter_mm": 76.0,
+    "core_diameter_mm": 76.0,
+    "material_thickness_mm": 0.05,
+    "start_with_last_job": false,
+    "simulated_speed_mpm": 30.0,
+    "plc_enabled": false,
+    "plc_ip": "",
+    "plc_port": 502,
+    "plc_unit_id": 1,
+    "plc_protocol": "modbus_tcp",
+    "plc_timeout_ms": 1000,
+    "plc_tower_red": "",
+    "plc_tower_yellow": "",
+    "plc_tower_green": "",
+    "plc_buzzer": "",
+    "plc_stop_line": ""
+  },
+  "retention_policy": {
+    "thumbnails_days": 30,
+    "evidence_days": 90,
+    "video_days": 14
+  },
+  "alarm_rules": {
+    "critical_defect_area": 500.0,
+    "defect_rate_per_frame": 3,
+    "brightness_min": 10.0,
+    "brightness_max": 245.0
+  },
+  "sensor_config": {
+    "label_pitch_m": 0.07,
+    "cmark_enabled": false,
+    "jitter_tolerance_ms": 20,
+    "fallback_encoder": true,
+    "encoder_pitch_m": 0.15,
+    "mm_per_tick": 0.0,
+    "repeat_mm": 0.0
+  },
+  "last_job_id": "",
+  "last_recipe": ""
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Test 2 ",
+    "client": "",
+    "job_number": "",
+    "camera_id": 0,
+    "exposure": -5.0,
+    "master_file": "",
+    "web_width_mm": 330.0,
+    "lane_count": 1,
+    "rois": [],
+    "defect_thresholds": {
+        "min_area": 50.0,
+        "sensitivity": 30.0
+    },
+    "color_targets": []
+}

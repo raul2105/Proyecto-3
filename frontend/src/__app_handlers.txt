@@ -1,0 +1,48 @@
+  const handleStartRoll = async () => {
+    if (!rollId) return
+    await fetch(`${API_URL}/roll/start`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ roll_id: rollId })
+    })
+  }
+
+  const handleAutoRoll = async () => {
+    const res = await fetch(`${API_URL}/roll/start`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ roll_id: '' })
+    })
+    if (res.ok) {
+      const data = await res.json()
+      setRollId(data.roll_id || '')
+    }
+  }
+
+  const handleStartInspection = async () => {
+    if (isInspecting) {
+      setIsInspecting(false)
+      return
+    }
+    if (!activeRecipe) {
+      alert('Load a recipe before starting inspection.')
+      return
+    }
+    if (!jobId) {
+      alert('Start a job before inspection.')
+      return
+    }
+    await fetch(`${API_URL}/job/start`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ job_id: jobId, recipe: activeRecipe })
+    })
+    if (!rollId) {
+      await handleAutoRoll()
+    }
+    setIsInspecting(true)
+  }
+
+  const handleEndRoll = async () => {
+    await fetch(`${API_URL}/roll/end`, { method: 'POST' })
+  }

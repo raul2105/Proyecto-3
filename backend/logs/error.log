@@ -1,0 +1,927 @@
+2026-01-23 18:30:19,040 ERROR uvicorn.error: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8001): [winerror 10048] solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+2026-01-23 18:31:51,098 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 988, in start_roll
+    insert_roll(state.roll_id, state.job_id)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 152, in insert_roll
+    cur.execute(
+sqlite3.OperationalError: table rolls has no column named start_ts
+2026-01-23 18:32:36,131 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:32:37,080 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:42,876 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 988, in start_roll
+    insert_roll(state.roll_id, state.job_id)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 152, in insert_roll
+    cur.execute(
+sqlite3.OperationalError: table rolls has no column named start_ts
+2026-01-23 18:34:49,420 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:50,570 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:51,678 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:53,132 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:54,691 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:56,439 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:34:59,225 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 18:35:00,757 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2046, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-01-23 19:17:14,994 ERROR uvicorn.error: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8001): [winerror 10048] solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+2026-01-23 19:22:00,602 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 988, in start_roll
+    insert_roll(state.roll_id, state.job_id)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 152, in insert_roll
+    cur.execute(
+sqlite3.OperationalError: table rolls has no column named start_ts
+2026-01-23 19:22:31,042 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto 3\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 988, in start_roll
+    insert_roll(state.roll_id, state.job_id)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 152, in insert_roll
+    cur.execute(
+sqlite3.OperationalError: table rolls has no column named start_ts
+2026-01-26 11:42:43,553 ERROR uvicorn.error: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8001): [winerror 10048] solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)

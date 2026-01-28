@@ -1,0 +1,143 @@
+{
+  "alarm_rules_examples": [
+    {
+      "rule_id": "critical_defect",
+      "enabled": true,
+      "trigger_type": "on_defect",
+      "trigger_config": {
+        "severity": "critical"
+      },
+      "actions": [
+        {
+          "action_type": "TOWER_LIGHT",
+          "color": "red",
+          "duration_ms": 1000
+        },
+        {
+          "action_type": "BUZZER",
+          "duration_ms": 500
+        },
+        {
+          "action_type": "PLC_WRITE",
+          "plc_address": "stop_line",
+          "plc_value": 1
+        },
+        {
+          "action_type": "HMI_POPUP",
+          "popup_title": "DEFECTO CRÍTICO",
+          "popup_message": "Se detectó un defecto crítico. La línea se detiene."
+        }
+      ],
+      "cooldown_ms": 2000,
+      "description": "Critical defect - stop and alert"
+    },
+    {
+      "rule_id": "high_defect_rate",
+      "enabled": true,
+      "trigger_type": "on_rate",
+      "trigger_config": {
+        "defects_per_100m": 10
+      },
+      "actions": [
+        {
+          "action_type": "TOWER_LIGHT",
+          "color": "yellow",
+          "duration_ms": 500
+        },
+        {
+          "action_type": "EMAIL",
+          "email_to": ["supervisor@company.com"],
+          "email_subject": "High Defect Rate Alert"
+        }
+      ],
+      "cooldown_ms": 60000,
+      "description": "High defect rate - alert supervisor"
+    },
+    {
+      "rule_id": "color_out_of_tolerance",
+      "enabled": true,
+      "trigger_type": "on_color_oot",
+      "trigger_config": {
+        "roi_ids": ["color_roi_1", "color_roi_2"],
+        "duration_s": 5
+      },
+      "actions": [
+        {
+          "action_type": "TOWER_LIGHT",
+          "color": "yellow",
+          "duration_ms": 500
+        },
+        {
+          "action_type": "HMI_POPUP",
+          "popup_title": "Color Warning",
+          "popup_message": "Color out of tolerance"
+        }
+      ],
+      "cooldown_ms": 5000,
+      "description": "Color out of tolerance - warning"
+    },
+    {
+      "rule_id": "major_defect",
+      "enabled": true,
+      "trigger_type": "on_defect",
+      "trigger_config": {
+        "severity": "major",
+        "min_area_px": 150
+      },
+      "actions": [
+        {
+          "action_type": "TOWER_LIGHT",
+          "color": "yellow",
+          "duration_ms": 500
+        },
+        {
+          "action_type": "LOG_ONLY"
+        }
+      ],
+      "cooldown_ms": 3000,
+      "description": "Major defect - warning only"
+    }
+  ],
+  "color_roi_examples": [
+    {
+      "roi_id": "color_roi_1",
+      "name": "Coca-Cola Red",
+      "bounds": [100, 100, 200, 200],
+      "lab_l": 40.5,
+      "lab_a": 72.3,
+      "lab_b": 28.1,
+      "warn_deltae": 2.0,
+      "oot_deltae": 5.0,
+      "deltae_formula": "94"
+    },
+    {
+      "roi_id": "color_roi_2",
+      "name": "Brand White",
+      "bounds": [250, 100, 350, 200],
+      "lab_l": 95.0,
+      "lab_a": -1.0,
+      "lab_b": 2.0,
+      "warn_deltae": 1.5,
+      "oot_deltae": 3.0,
+      "deltae_formula": "94"
+    }
+  ],
+  "defect_catalog": {
+    "ARTWORK_DIFF": "artwork_diff",
+    "MISSING_PRINT": "missing_print",
+    "REGISTER_ERROR": "register_error",
+    "EXCESS_INK": "excess_ink",
+    "SMEAR": "smear",
+    "STREAK": "streak",
+    "CONTAMINATION": "contamination",
+    "SPOT": "spot",
+    "DIE_CUT_ERROR": "die_cut_error",
+    "COLOR_OOT": "color_oot",
+    "UNKNOWN": "unknown"
+  },
+  "severity_levels": {
+    "CRITICAL": "critical",
+    "MAJOR": "major",
+    "MINOR": "minor"
+  }
+}

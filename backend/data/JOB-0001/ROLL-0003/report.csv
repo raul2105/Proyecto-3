@@ -1,0 +1,6 @@
+roll_id,yield_pct,defects_small,defects_medium,defects_critical,total_defects,meters_processed
+ROLL-0003,None,0,0,0,0,0
+
+segment_index,defect_count
+
+timestamp,delta_e
