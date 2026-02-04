@@ -10,3 +10,11 @@ uvicorn
 scikit-image
 python-jose[cryptography]
 passlib
+pydantic
+pytest
+pytest-cov
+flake8
+mypy
+black
+bandit
+safety
