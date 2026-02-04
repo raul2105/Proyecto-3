@@ -47,6 +47,12 @@ class DefectSeverity(Enum):
     MINOR = "minor"
 
 
+class OperationalClass(Enum):
+    """Clasificación operativa para decisiones de línea"""
+    MAJOR = "major"
+    MICRO = "micro"
+
+
 @dataclass
 class DefectRecord:
     """Registro de un defecto detectado"""
@@ -56,6 +62,7 @@ class DefectRecord:
     # Clasificación
     type: DefectType
     severity: DefectSeverity
+    operational_class: OperationalClass
     
     # Ubicación
     roi_id: str
@@ -117,7 +124,11 @@ class DefectClassifier:
             recipe_thresholds = {
                 "critical_area": 500,
                 "major_area": 150,
-                "critical_defect_types": ["missing_print", "register_error"]
+                "critical_defect_types": ["missing_print", "register_error"],
+                "micro_defect_min_mm": 0.05,
+                "micro_defect_max_mm": 0.08,
+                "pixels_per_mm": 0.0,
+                "micro_defect_max_area_px": 120.0
             }
         
         # [1] Determinar TIPO
@@ -129,6 +140,12 @@ class DefectClassifier:
             defect_data,
             recipe_thresholds
         )
+
+        operational_class = self._determine_operational_class(
+            defect_data,
+            recipe_thresholds,
+            severity
+        )
         
         # [3] Crear registro
         record = DefectRecord(
@@ -136,6 +153,7 @@ class DefectClassifier:
             timestamp=datetime.now(),
             type=defect_type,
             severity=severity,
+            operational_class=operational_class,
             roi_id=defect_data.get("roi_id", "unknown"),
             x=defect_data.get("x", 0.0),
             y=defect_data.get("y", 0.0),
@@ -155,6 +173,7 @@ class DefectClassifier:
             "defect_id": record.defect_id,
             "type": record.type.value,
             "severity": record.severity.value,
+            "operational_class": record.operational_class.value,
             "area": record.area_px,
             "confidence": record.confidence_score,
             "rule": rule_applied,
@@ -165,6 +184,7 @@ class DefectClassifier:
         logger.info(
             f"Defect classified: {record.defect_id} "
             f"type={record.type.value} severity={record.severity.value} "
+            f"operational={record.operational_class.value} "
             f"area={record.area_px:.0f}px rule='{rule_applied}'"
         )
         
@@ -246,6 +266,35 @@ class DefectClassifier:
         else:
             rule = f"Area({area:.0f}px)<{major_area}px"
             return DefectSeverity.MINOR, rule
+
+    def _determine_operational_class(self,
+                                     defect_data: dict,
+                                     thresholds: dict,
+                                     severity: DefectSeverity) -> OperationalClass:
+        """
+        Clasificación operativa: MAJOR vs MICRO
+        MICRO aplica solo a defectos pequeños y NO críticos.
+        """
+        if severity in (DefectSeverity.CRITICAL, DefectSeverity.MAJOR):
+            return OperationalClass.MAJOR
+        return OperationalClass.MICRO if self._is_micro_defect(defect_data, thresholds) else OperationalClass.MAJOR
+
+    def _is_micro_defect(self, defect_data: dict, thresholds: dict) -> bool:
+        min_mm = float(thresholds.get("micro_defect_min_mm", 0.05) or 0.05)
+        max_mm = float(thresholds.get("micro_defect_max_mm", 0.08) or 0.08)
+        pixels_per_mm = float(thresholds.get("pixels_per_mm", 0.0) or 0.0)
+        max_area_px = float(thresholds.get("micro_defect_max_area_px", 120.0) or 120.0)
+        area = float(defect_data.get("area", 0.0) or 0.0)
+
+        if pixels_per_mm > 0:
+            w = float(defect_data.get("w", 0.0) or 0.0)
+            h = float(defect_data.get("h", 0.0) or 0.0)
+            if w <= 0 or h <= 0:
+                return 0 < area <= max_area_px
+            max_dim_mm = max(w, h) / pixels_per_mm
+            return min_mm <= max_dim_mm <= max_mm
+
+        return 0 < area <= max_area_px
     
     def get_classification_log(self) -> List[Dict]:
         """Retornar historial de clasificaciones (para auditoría)"""

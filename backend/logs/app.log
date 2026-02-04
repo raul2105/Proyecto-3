@@ -12759,3 +12759,1947 @@ sqlite3.OperationalError: table rolls has no column named start_ts
 2026-01-28 18:33:36,761 INFO uvicorn.access: 127.0.0.1:52470 - "GET /alarms HTTP/1.1" 200
 2026-01-28 18:33:36,762 INFO uvicorn.access: 127.0.0.1:52469 - "GET /events?limit=50 HTTP/1.1" 200
 2026-01-28 18:33:36,764 INFO uvicorn.access: 127.0.0.1:52473 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:54,898 INFO uvicorn.error: Started server process [32840]
+2026-01-30 16:37:54,899 INFO uvicorn.error: Waiting for application startup.
+2026-01-30 16:37:54,899 INFO uvicorn.error: Application startup complete.
+2026-01-30 16:37:54,901 INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-01-30 16:37:55,050 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:55,053 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:55,055 INFO uvicorn.access: 127.0.0.1:65239 - "OPTIONS /login HTTP/1.1" 200
+2026-01-30 16:37:55,056 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:55,059 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:37:55,062 INFO uvicorn.access: 127.0.0.1:65238 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:37:55,070 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:37:55,072 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:37:55,075 INFO uvicorn.access: 127.0.0.1:65239 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:37:55,076 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:37:55,078 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:37:55,082 INFO uvicorn.access: 127.0.0.1:65237 - "POST /login HTTP/1.1" 200
+2026-01-30 16:37:55,084 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:55,088 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:37:55,107 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:37:55,116 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:37:56,251 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:37:56,253 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:56,254 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:37:56,256 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:37:58,290 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:37:58,291 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:37:58,293 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:37:58,294 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:00,297 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:00,300 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:00,301 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:00,310 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:02,304 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:02,305 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:02,306 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:02,307 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:04,344 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:04,347 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:04,348 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:04,349 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:06,348 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:06,349 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:06,351 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:06,351 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:08,355 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:08,356 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:08,357 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:08,357 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:10,356 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:10,357 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:10,358 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:10,360 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:12,361 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:12,363 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:12,366 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:12,367 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:14,377 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:14,379 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:14,380 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:14,381 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:16,383 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:16,384 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:16,385 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:16,386 INFO uvicorn.access: 127.0.0.1:65267 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:17,163 INFO uvicorn.access: 127.0.0.1:65240 - "GET /cameras HTTP/1.1" 200
+2026-01-30 16:38:17,862 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:17,868 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:18,192 INFO uvicorn.access: 127.0.0.1:65236 - "GET /cameras HTTP/1.1" 200
+2026-01-30 16:38:18,402 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:18,403 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:18,404 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:18,405 INFO uvicorn.access: 127.0.0.1:65267 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:18,983 INFO uvicorn.access: 127.0.0.1:65240 - "GET /cameras HTTP/1.1" 200
+2026-01-30 16:38:20,430 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:20,431 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:20,433 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:20,433 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:20,870 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:22,438 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:22,439 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:22,440 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:22,441 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:23,881 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:24,456 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:24,457 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:24,458 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:24,459 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:26,473 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:26,474 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:26,475 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:26,476 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:26,881 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:28,502 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:28,504 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:28,507 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:28,509 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:29,914 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:30,534 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:30,535 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:30,536 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:30,536 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:32,555 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:32,560 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:32,563 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:32,572 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:34,557 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:34,565 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:34,579 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:34,592 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:36,638 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:36,640 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:36,641 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:36,642 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:38,674 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:38,675 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:38,676 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:38,678 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:40,675 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:40,677 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:40,679 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:40,681 INFO uvicorn.access: 127.0.0.1:54510 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:41,041 INFO uvicorn.access: 127.0.0.1:65241 - "GET /cameras HTTP/1.1" 200
+2026-01-30 16:38:42,229 INFO uvicorn.access: 127.0.0.1:65237 - "GET /cameras HTTP/1.1" 200
+2026-01-30 16:38:42,286 INFO uvicorn.access: 127.0.0.1:54513 - "GET /stream/live.mjpg?scale=0.6&quality=70 HTTP/1.1" 200
+2026-01-30 16:38:42,695 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:42,699 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:42,703 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:42,705 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:44,795 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:44,797 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:44,798 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:44,799 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:46,821 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:46,823 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:46,826 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:46,828 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:48,975 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:48,977 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:48,978 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:48,981 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:51,008 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:51,012 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:51,013 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:51,015 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:53,023 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:53,025 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:53,026 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:53,027 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:55,191 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:55,191 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:55,193 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:55,194 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:57,049 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:38:57,050 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:57,051 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:57,053 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:59,904 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:38:59,906 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:38:59,906 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:38:59,907 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:02,247 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:02,248 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:02,250 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:02,251 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:04,247 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:04,248 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:04,249 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:04,251 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:06,250 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:06,251 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:06,252 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:06,253 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:08,260 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:08,260 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:08,262 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:08,263 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:10,273 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:10,274 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:10,275 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:10,276 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:13,321 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:13,324 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:13,325 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:13,326 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:15,343 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:15,344 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:15,345 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:15,346 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:17,356 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:17,358 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:17,359 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:17,360 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:19,356 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:19,357 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:19,359 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:19,359 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:21,633 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:21,635 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:21,636 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:21,638 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:23,690 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:23,692 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:23,693 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:23,694 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:25,693 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:25,694 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:25,695 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:25,695 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:27,695 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:27,696 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:27,698 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:27,699 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:29,739 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:29,740 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:29,742 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:29,742 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:31,762 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:31,763 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:31,764 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:31,765 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:33,783 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:33,784 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:33,784 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:33,785 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:36,238 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:36,238 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:36,239 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:36,240 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:38,247 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:38,248 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:38,250 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:38,251 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:40,261 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:40,261 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:40,263 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:40,263 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:42,279 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:42,279 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:42,280 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:42,281 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:44,298 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:44,299 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:44,299 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:44,300 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:46,367 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:46,367 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:46,368 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:46,369 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:48,367 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:48,368 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:48,369 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:48,370 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:50,604 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:50,605 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:50,606 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:50,606 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:52,628 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:52,629 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:52,630 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:52,631 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:54,718 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:54,719 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:54,719 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:54,721 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:56,725 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:56,726 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:39:56,729 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:56,731 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:58,731 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:39:58,732 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:39:58,733 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:39:58,734 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:01,243 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:01,244 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:01,246 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:01,247 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:03,267 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:03,268 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:03,269 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:03,269 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:06,331 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:06,332 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:06,333 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:06,333 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:08,362 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:08,363 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:08,363 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:08,364 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:10,391 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:10,392 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:10,393 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:10,394 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:12,412 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:12,414 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:12,415 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:12,416 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:15,344 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:15,345 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:15,347 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:15,347 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:17,421 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:17,423 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:17,427 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:17,429 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:19,409 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:19,410 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:19,412 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:19,413 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:21,668 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:21,669 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:21,670 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:21,671 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:23,677 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:23,677 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:23,678 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:23,679 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:25,699 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:25,699 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:25,701 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:25,702 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:27,706 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:27,706 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:27,708 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:27,709 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:29,716 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:29,717 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:29,718 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:29,719 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:31,724 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:31,725 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:31,727 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:31,727 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:33,733 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:33,734 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:33,735 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:33,736 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:36,279 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:36,281 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:36,282 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:36,284 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:38,298 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:38,299 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:38,301 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:38,301 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:40,331 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:40,332 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:40,333 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:40,333 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:42,419 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:42,420 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:42,421 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:42,421 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:44,469 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:44,492 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:44,527 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:44,546 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:48,205 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:48,262 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:48,267 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:48,300 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:51,439 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:51,442 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:51,444 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:51,448 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:53,498 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:53,498 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:53,500 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:53,501 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:55,518 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:55,519 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:55,520 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:55,520 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:57,543 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:40:57,544 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:57,545 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:57,546 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:59,566 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:40:59,567 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:40:59,568 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:40:59,569 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:02,256 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:02,256 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:02,258 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:02,258 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:04,262 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:04,264 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:04,264 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:04,265 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:07,255 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:07,255 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:07,256 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:07,257 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:09,272 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:09,275 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:09,277 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:09,280 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:11,267 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:11,269 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:11,270 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:11,271 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:13,272 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:13,272 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:13,273 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:13,274 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:15,283 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:15,283 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:15,285 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:15,286 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:17,301 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:17,302 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:17,303 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:17,304 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:19,304 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:19,305 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:19,305 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:19,306 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:21,810 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:21,811 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:21,812 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:21,813 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:23,964 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:23,965 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:23,966 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:23,966 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:26,096 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:26,097 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:26,100 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:26,103 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:28,109 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:28,111 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:28,112 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:28,113 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:30,128 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:30,130 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:30,131 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:30,132 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:32,151 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:32,152 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:32,153 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:32,154 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:34,179 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:34,180 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:34,181 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:34,183 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:36,249 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:36,250 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:36,251 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:36,253 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:38,262 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:38,263 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:38,264 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:38,265 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:40,282 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:40,283 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:40,285 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:40,286 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:42,311 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:42,312 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:42,313 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:42,315 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:44,328 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:44,329 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:44,330 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:44,331 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:46,347 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:46,348 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:46,349 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:46,351 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:48,381 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:48,383 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:48,384 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:48,385 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:50,725 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:50,726 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:50,727 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:50,728 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:52,749 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:52,750 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:52,751 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:52,752 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:54,760 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:54,761 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:54,762 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:54,763 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:56,795 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:56,800 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:56,802 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:56,808 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:41:58,842 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:41:58,843 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:41:58,844 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:41:58,844 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:01,247 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:01,247 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:01,249 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:01,250 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:03,267 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:03,268 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:03,268 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:03,269 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:05,275 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:05,276 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:05,277 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:05,277 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:07,506 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:07,507 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:07,508 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:07,509 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:09,522 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:09,523 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:09,524 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:09,525 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:11,523 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:11,524 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:11,525 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:11,525 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:13,531 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:13,532 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:13,532 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:13,533 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:15,537 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:15,538 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:15,539 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:15,540 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:18,375 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:18,376 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:18,377 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:18,378 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:20,739 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:20,743 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:20,744 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:20,746 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:22,752 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:22,754 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:22,755 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:22,756 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:24,759 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:24,760 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:24,761 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:24,762 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:26,761 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:26,762 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:26,763 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:26,765 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:28,759 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:28,759 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:28,760 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:28,761 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:30,779 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:30,781 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:30,782 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:30,783 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:32,787 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:32,788 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:32,789 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:32,790 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:34,795 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:34,796 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:34,797 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:34,798 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:37,231 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:37,232 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:37,233 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:37,234 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:39,247 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:39,248 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:39,249 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:39,250 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:41,270 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:41,271 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:41,272 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:41,273 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:43,274 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:43,275 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:43,276 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:43,277 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:45,295 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:45,296 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:45,298 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:45,299 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:47,505 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:47,507 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:47,509 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:47,510 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:49,322 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:49,323 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:49,326 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:49,329 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:51,767 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:51,768 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:51,770 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:51,772 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:53,805 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:53,806 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:53,808 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:53,811 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:55,797 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:55,799 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:55,800 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:55,801 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:57,842 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:57,849 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:57,850 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:57,853 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:42:59,910 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:42:59,912 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:42:59,913 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:42:59,915 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:02,243 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:02,244 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:02,245 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:02,246 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:04,250 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:04,250 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:04,252 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:04,253 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:07,237 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:07,239 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:07,240 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:07,240 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:09,243 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:09,245 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:09,246 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:09,247 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:12,238 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:12,239 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:12,240 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:12,241 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:14,265 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:14,268 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:14,270 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:14,273 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:16,311 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:16,312 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:16,314 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:16,315 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:18,346 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:18,347 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:18,348 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:18,349 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:20,754 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:20,755 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:20,757 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:20,760 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:22,763 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:22,764 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:22,764 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:22,765 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:24,771 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:24,773 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:24,774 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:24,775 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:26,778 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:26,779 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:26,780 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:26,781 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:28,786 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:28,787 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:28,788 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:28,789 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:30,794 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:30,795 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:30,796 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:30,797 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:32,815 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:32,816 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:32,817 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:32,818 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:34,826 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:34,828 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:34,829 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:34,831 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:37,246 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:37,247 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:37,247 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:37,248 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:39,252 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:39,253 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:39,254 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:39,255 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:41,264 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:41,267 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:41,270 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:41,271 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:43,325 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:43,327 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:43,328 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:43,330 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:45,288 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:45,289 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:45,290 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:45,291 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:47,293 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:47,294 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:47,295 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:47,296 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:49,349 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:49,350 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:49,351 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:49,352 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:51,766 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:51,767 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:51,769 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:51,770 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:53,785 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:53,788 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:53,789 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:53,790 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:55,799 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:55,800 INFO uvicorn.access: 127.0.0.1:65236 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:55,801 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:55,801 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:57,807 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:57,808 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:43:57,809 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:57,810 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:59,814 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:43:59,815 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:43:59,815 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:43:59,817 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:00,326 INFO uvicorn.access: 127.0.0.1:61012 - "GET /color/target HTTP/1.1" 200
+2026-01-30 16:44:00,375 INFO uvicorn.access: 127.0.0.1:61012 - "GET /settings HTTP/1.1" 200
+2026-01-30 16:44:00,380 INFO uvicorn.access: 127.0.0.1:61012 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:00,383 INFO uvicorn.access: 127.0.0.1:61012 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:02,259 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:02,260 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:02,261 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:02,262 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:04,282 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:04,283 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:04,285 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:04,286 INFO uvicorn.access: 127.0.0.1:65241 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:07,294 INFO uvicorn.access: 127.0.0.1:65240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:07,294 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:07,295 INFO uvicorn.access: 127.0.0.1:65241 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:07,296 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:09,319 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:09,319 INFO uvicorn.access: 127.0.0.1:65237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:09,321 INFO uvicorn.access: 127.0.0.1:65241 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:09,322 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:11,347 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:11,348 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:11,349 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:11,350 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:13,377 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:13,378 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:13,379 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:13,380 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:15,402 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:15,403 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:15,404 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:15,405 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:17,423 INFO uvicorn.access: 127.0.0.1:55384 - "GET /color/target HTTP/1.1" 200
+2026-01-30 16:44:17,429 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:17,430 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:17,431 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:17,433 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:17,523 INFO uvicorn.access: 127.0.0.1:55384 - "GET /settings HTTP/1.1" 200
+2026-01-30 16:44:17,600 INFO uvicorn.access: 127.0.0.1:55384 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:17,681 INFO uvicorn.access: 127.0.0.1:55384 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:19,458 INFO uvicorn.access: 127.0.0.1:65240 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:19,459 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:19,460 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:19,461 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:21,810 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:21,811 INFO uvicorn.access: 127.0.0.1:65237 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:21,812 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:21,813 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:24,387 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:24,388 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:24,389 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:24,389 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:26,396 INFO uvicorn.access: 127.0.0.1:65236 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:26,397 INFO uvicorn.access: 127.0.0.1:65237 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:26,397 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:26,399 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:28,424 INFO uvicorn.access: 127.0.0.1:65240 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:28,433 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:28,447 INFO uvicorn.access: 127.0.0.1:65236 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:44:28,452 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:30,113 INFO uvicorn.access: 127.0.0.1:55423 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:30,435 INFO uvicorn.access: 127.0.0.1:65237 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:44:30,437 INFO uvicorn.access: 127.0.0.1:65236 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:44:30,438 INFO uvicorn.access: 127.0.0.1:65241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 16:44:30,439 INFO uvicorn.access: 127.0.0.1:65240 - "GET /alarms HTTP/1.1" 200
+2026-01-30 16:45:07,448 INFO uvicorn.access: 127.0.0.1:50789 - "GET /color/target HTTP/1.1" 200
+2026-01-30 16:45:07,451 INFO uvicorn.access: 127.0.0.1:50790 - "GET /settings HTTP/1.1" 200
+2026-01-30 16:45:07,456 INFO uvicorn.access: 127.0.0.1:50791 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 16:45:07,460 INFO uvicorn.access: 127.0.0.1:50792 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:45:07,472 INFO uvicorn.access: 127.0.0.1:50793 - "GET /toggle-source?use_simulator=true HTTP/1.1" 405
+2026-01-30 16:45:19,067 INFO uvicorn.access: 127.0.0.1:58698 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:45:29,858 INFO uvicorn.access: 127.0.0.1:58772 - "GET /line/status HTTP/1.1" 200
+2026-01-30 16:45:38,497 INFO uvicorn.access: 127.0.0.1:58790 - "GET /color/target HTTP/1.1" 200
+2026-01-30 16:45:47,171 INFO uvicorn.access: 127.0.0.1:58816 - "GET /toggle-source?use_simulator=true HTTP/1.1" 405
+2026-01-30 16:45:53,166 INFO uvicorn.access: 127.0.0.1:58839 - "POST /toggle-source?use_simulator=true HTTP/1.1" 200
+2026-01-30 16:47:14,882 INFO uvicorn.access: 127.0.0.1:52205 - "OPTIONS /login HTTP/1.1" 200
+2026-01-30 16:47:22,585 INFO uvicorn.access: 127.0.0.1:58779 - "OPTIONS /login HTTP/1.1" 200
+2026-01-30 16:47:35,328 INFO uvicorn.access: 127.0.0.1:58881 - "OPTIONS /login HTTP/1.1" 200
+2026-01-30 16:48:04,442 INFO uvicorn.access: 127.0.0.1:58414 - "POST /login HTTP/1.1" 422
+2026-01-30 16:48:16,222 INFO uvicorn.access: 127.0.0.1:58443 - "POST /login HTTP/1.1" 422
+2026-01-30 16:48:23,716 INFO uvicorn.access: 127.0.0.1:52007 - "POST /login HTTP/1.1" 422
+2026-01-30 16:48:30,845 INFO uvicorn.access: 127.0.0.1:52023 - "POST /login HTTP/1.1" 422
+2026-01-30 16:48:38,239 INFO uvicorn.access: 127.0.0.1:52041 - "POST /login HTTP/1.1" 422
+2026-01-30 16:48:46,159 INFO uvicorn.access: 127.0.0.1:56446 - "POST /login HTTP/1.1" 422
+2026-01-30 16:48:57,599 INFO uvicorn.access: 127.0.0.1:56471 - "POST /login HTTP/1.1" 200
+2026-01-30 16:49:05,444 INFO uvicorn.access: 127.0.0.1:56489 - "POST /login HTTP/1.1" 200
+2026-01-30 17:10:48,124 INFO uvicorn.error: Started server process [30232]
+2026-01-30 17:10:48,125 INFO uvicorn.error: Waiting for application startup.
+2026-01-30 17:10:48,127 INFO uvicorn.error: Application startup complete.
+2026-01-30 17:10:48,128 ERROR uvicorn.error: [Errno 10048] error while attempting to bind on address ('0.0.0.0', 8001): [winerror 10048] solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)
+2026-01-30 17:10:48,128 INFO uvicorn.error: Waiting for application shutdown.
+2026-01-30 17:10:48,129 INFO uvicorn.error: Application shutdown complete.
+2026-01-30 17:10:53,353 INFO uvicorn.access: 127.0.0.1:63526 - "GET /color/target HTTP/1.1" 200
+2026-01-30 17:10:53,402 INFO uvicorn.access: 127.0.0.1:63527 - "GET /settings HTTP/1.1" 200
+2026-01-30 17:10:53,406 INFO uvicorn.access: 127.0.0.1:63528 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:10:53,762 INFO uvicorn.access: 127.0.0.1:63528 - "POST /toggle-source?use_simulator=true HTTP/1.1" 200
+2026-01-30 17:10:53,769 INFO uvicorn.access: 127.0.0.1:63527 - "POST /toggle-source?use_simulator=true HTTP/1.1" 200
+2026-01-30 17:10:53,783 INFO uvicorn.access: 127.0.0.1:63526 - "GET /color/target HTTP/1.1" 200
+2026-01-30 17:10:53,787 INFO uvicorn.access: 127.0.0.1:63528 - "GET /settings HTTP/1.1" 200
+2026-01-30 17:10:53,789 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:10:55,315 INFO uvicorn.access: 127.0.0.1:63527 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:10:55,321 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:10:55,323 INFO uvicorn.access: 127.0.0.1:63527 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:10:55,325 INFO uvicorn.access: 127.0.0.1:63531 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:10:57,330 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:10:57,331 INFO uvicorn.access: 127.0.0.1:63527 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:10:57,332 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:10:57,334 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:10:58,600 INFO uvicorn.access: 127.0.0.1:63528 - "OPTIONS /login HTTP/1.1" 200
+2026-01-30 17:10:58,613 INFO uvicorn.access: 127.0.0.1:63527 - "POST /login HTTP/1.1" 200
+2026-01-30 17:10:59,341 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:10:59,344 INFO uvicorn.access: 127.0.0.1:63527 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:10:59,345 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:10:59,347 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:01,353 INFO uvicorn.access: 127.0.0.1:63528 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:01,355 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:01,357 INFO uvicorn.access: 127.0.0.1:63527 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:01,360 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:03,147 INFO uvicorn.access: 127.0.0.1:64792 - "GET /stream/live.mjpg?scale=0.6&quality=70 HTTP/1.1" 200
+2026-01-30 17:11:03,402 INFO uvicorn.access: 127.0.0.1:63527 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:03,405 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:03,410 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:03,413 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:05,368 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:05,369 INFO uvicorn.access: 127.0.0.1:63528 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:05,369 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:05,372 INFO uvicorn.access: 127.0.0.1:63527 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:07,442 INFO uvicorn.access: 127.0.0.1:63527 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:07,444 INFO uvicorn.access: 127.0.0.1:63531 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:07,453 INFO uvicorn.access: 127.0.0.1:63527 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:07,455 INFO uvicorn.access: 127.0.0.1:63531 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:08,021 INFO uvicorn.access: 127.0.0.1:63527 - "GET /reports/history?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:08,499 INFO uvicorn.access: 127.0.0.1:63528 - "GET /cameras HTTP/1.1" 200
+2026-01-30 17:11:09,485 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:09,523 INFO uvicorn.access: 127.0.0.1:63531 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:09,567 INFO uvicorn.access: 127.0.0.1:63526 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:09,604 INFO uvicorn.access: 127.0.0.1:64805 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:10,576 INFO uvicorn.access: 127.0.0.1:63527 - "GET /cameras HTTP/1.1" 200
+2026-01-30 17:11:11,460 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:11,462 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:11,463 INFO uvicorn.access: 127.0.0.1:63527 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:11,465 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:13,511 INFO uvicorn.access: 127.0.0.1:63527 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:13,514 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:13,528 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:13,532 INFO uvicorn.access: 127.0.0.1:63528 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:15,630 INFO uvicorn.access: 127.0.0.1:63527 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:15,638 INFO uvicorn.access: 127.0.0.1:63528 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:15,644 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:15,653 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:17,544 INFO uvicorn.access: 127.0.0.1:63531 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:17,557 INFO uvicorn.access: 127.0.0.1:63528 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:17,560 INFO uvicorn.access: 127.0.0.1:63526 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:17,572 INFO uvicorn.access: 127.0.0.1:63527 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:19,546 INFO uvicorn.access: 127.0.0.1:63527 - "GET /alarms HTTP/1.1" 200
+2026-01-30 17:11:19,550 INFO uvicorn.access: 127.0.0.1:63531 - "GET /events?limit=50 HTTP/1.1" 200
+2026-01-30 17:11:19,553 INFO uvicorn.access: 127.0.0.1:63526 - "GET /sensors/status HTTP/1.1" 200
+2026-01-30 17:11:19,564 INFO uvicorn.access: 127.0.0.1:64825 - "GET /line/status HTTP/1.1" 200
+2026-01-30 17:11:19,609 INFO uvicorn.access: 127.0.0.1:63527 - "OPTIONS /connect-camera HTTP/1.1" 200
+2026-02-01 22:55:01,200 INFO uvicorn.error: Started server process [33928]
+2026-02-01 22:55:01,203 INFO uvicorn.error: Waiting for application startup.
+2026-02-01 22:55:01,203 INFO uvicorn.error: Application startup complete.
+2026-02-01 22:55:01,205 INFO uvicorn.error: Uvicorn running on http://0.0.0.0:8001 (Press CTRL+C to quit)
+2026-02-01 22:55:01,383 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:01,394 INFO uvicorn.access: 127.0.0.1:63241 - "POST /toggle-source?use_simulator=true HTTP/1.1" 200
+2026-02-01 22:55:01,397 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:01,400 INFO uvicorn.access: 127.0.0.1:63238 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:01,402 INFO uvicorn.access: 127.0.0.1:63239 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:01,405 INFO uvicorn.access: 127.0.0.1:63236 - "GET /settings HTTP/1.1" 200
+2026-02-01 22:55:01,408 INFO uvicorn.access: 127.0.0.1:63240 - "POST /toggle-source?use_simulator=true HTTP/1.1" 200
+2026-02-01 22:55:01,413 INFO uvicorn.access: 127.0.0.1:63241 - "GET /color/target HTTP/1.1" 200
+2026-02-01 22:55:01,414 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:01,418 INFO uvicorn.access: 127.0.0.1:63236 - "GET /settings HTTP/1.1" 200
+2026-02-01 22:55:01,424 INFO uvicorn.access: 127.0.0.1:63236 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:01,426 INFO uvicorn.access: 127.0.0.1:63237 - "GET /color/target HTTP/1.1" 200
+2026-02-01 22:55:02,772 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:02,772 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:02,773 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:02,774 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:04,278 INFO uvicorn.access: 127.0.0.1:63236 - "OPTIONS /login HTTP/1.1" 200
+2026-02-01 22:55:04,281 INFO uvicorn.access: 127.0.0.1:63236 - "POST /login HTTP/1.1" 200
+2026-02-01 22:55:04,856 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:04,857 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:04,858 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:04,859 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:06,877 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:06,879 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:06,879 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:06,883 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:08,954 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:08,956 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:08,957 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:08,959 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:10,955 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:10,955 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:10,957 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:10,957 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:13,216 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:13,218 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:13,220 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:13,222 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:15,322 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:15,323 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:15,325 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:15,326 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:17,374 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:17,375 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:17,377 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:17,378 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:19,447 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:19,449 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:19,450 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:19,451 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:21,057 INFO uvicorn.access: 127.0.0.1:63274 - "GET /stream/live.mjpg?scale=0.6&quality=70 HTTP/1.1" 200
+2026-02-01 22:55:21,408 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:21,411 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:21,413 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:21,417 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:23,417 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:23,418 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:23,418 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:23,419 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:25,436 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:25,438 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:25,439 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:25,441 INFO uvicorn.access: 127.0.0.1:63277 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:25,816 INFO uvicorn.access: 127.0.0.1:63236 - "GET /cameras HTTP/1.1" 200
+2026-02-01 22:55:26,237 INFO uvicorn.access: 127.0.0.1:63237 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:26,246 INFO uvicorn.access: 127.0.0.1:63241 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:26,876 INFO uvicorn.access: 127.0.0.1:63236 - "GET /cameras HTTP/1.1" 200
+2026-02-01 22:55:27,441 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:27,444 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:27,445 INFO uvicorn.access: 127.0.0.1:63241 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:27,447 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:29,267 INFO uvicorn.access: 127.0.0.1:63236 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:29,455 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:29,456 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:29,459 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:29,461 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:31,466 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:31,468 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:31,469 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:31,472 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:32,345 INFO uvicorn.access: 127.0.0.1:63236 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:33,547 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:33,548 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:33,549 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:33,550 INFO uvicorn.access: 127.0.0.1:63237 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:35,357 INFO uvicorn.access: 127.0.0.1:63236 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:35,569 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:35,571 INFO uvicorn.access: 127.0.0.1:63237 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:35,573 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:35,575 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:37,582 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:37,583 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:37,584 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:37,585 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:38,431 INFO uvicorn.access: 127.0.0.1:63236 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:38,687 INFO uvicorn.access: 127.0.0.1:63236 - "GET /recipes HTTP/1.1" 200
+2026-02-01 22:55:38,701 INFO uvicorn.access: 127.0.0.1:63236 - "GET /recipes HTTP/1.1" 200
+2026-02-01 22:55:39,585 INFO uvicorn.access: 127.0.0.1:63241 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:39,586 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:39,588 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:39,591 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:40,043 INFO uvicorn.access: 127.0.0.1:63236 - "GET /load-recipe/Test HTTP/1.1" 200
+2026-02-01 22:55:41,458 INFO uvicorn.access: 127.0.0.1:63241 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:41,500 INFO uvicorn.access: 127.0.0.1:63236 - "GET /load-recipe/Test HTTP/1.1" 200
+2026-02-01 22:55:41,619 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:41,620 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:41,622 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:41,623 INFO uvicorn.access: 127.0.0.1:63241 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:43,656 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:43,658 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:43,660 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:43,661 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:45,659 INFO uvicorn.access: 127.0.0.1:63237 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:45,660 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:45,662 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:45,663 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:47,669 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:47,671 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:47,672 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:47,673 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:49,679 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:49,683 INFO uvicorn.access: 127.0.0.1:63236 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:49,687 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:49,688 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:51,745 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:51,746 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:51,747 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:51,748 INFO uvicorn.access: 127.0.0.1:63236 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:52,771 INFO uvicorn.access: 127.0.0.1:63236 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:52,826 INFO uvicorn.access: 127.0.0.1:63236 - "OPTIONS /job/start HTTP/1.1" 200
+2026-02-01 22:55:53,228 INFO uvicorn.access: 127.0.0.1:63236 - "POST /job/start HTTP/1.1" 200
+2026-02-01 22:55:53,248 INFO uvicorn.access: 127.0.0.1:63236 - "OPTIONS /roll/start HTTP/1.1" 200
+2026-02-01 22:55:53,267 INFO uvicorn.access: 127.0.0.1:63236 - "POST /roll/start HTTP/1.1" 500
+2026-02-01 22:55:53,272 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 1102, in start_roll
+    insert_roll(state.roll_id, state.job_id)
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 152, in insert_roll
+    cur.execute(
+sqlite3.OperationalError: table rolls has no column named start_ts
+2026-02-01 22:55:53,781 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:53,784 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:53,786 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:53,788 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:55,821 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:55,822 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:55,824 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:55,826 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:57,835 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:57,837 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:55:57,839 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:57,841 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:59,838 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:55:59,840 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:55:59,841 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:55:59,842 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:02,121 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:02,123 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:02,124 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:02,125 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:03,886 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:03,887 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:03,889 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:03,890 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:05,902 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:05,903 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:05,905 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:05,905 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:07,905 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:07,906 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:07,907 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:07,908 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:09,924 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:09,926 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:09,927 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:09,928 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:11,944 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:11,945 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:11,946 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:11,948 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:13,955 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:13,955 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:13,956 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:13,958 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:15,965 INFO uvicorn.access: 127.0.0.1:63240 - "GET /traceability/roll/ROLL-0001/defects?limit=500 HTTP/1.1" 200
+2026-02-01 22:56:16,097 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:16,098 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:16,100 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:16,102 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:18,115 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:18,118 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:18,119 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:18,121 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:20,131 INFO uvicorn.access: 127.0.0.1:63241 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:20,148 INFO uvicorn.access: 127.0.0.1:63237 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:20,170 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:20,175 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:20,178 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:20,191 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:22,206 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:22,207 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:22,209 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:22,211 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:24,272 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:24,273 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:24,274 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:24,275 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:26,283 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:26,284 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:26,285 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:26,286 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:27,295 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:27,456 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:27,668 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:27,873 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:28,076 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:28,280 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:28,319 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:28,319 INFO uvicorn.access: 127.0.0.1:63237 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:28,321 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:28,321 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:28,498 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:28,717 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:28,949 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:29,135 INFO uvicorn.access: 127.0.0.1:63241 - "GET /traceability/roll/ROLL-0001/defects?limit=500 HTTP/1.1" 200
+2026-02-01 22:56:29,469 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:29,720 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:29,935 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:30,145 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:30,325 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:30,327 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:30,328 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:30,330 INFO uvicorn.access: 127.0.0.1:63240 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:30,374 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:30,628 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:30,797 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:30,999 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:31,241 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:31,483 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:31,689 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:31,907 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:32,105 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:32,375 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:32,375 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:32,377 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:32,379 INFO uvicorn.access: 127.0.0.1:62564 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:32,380 INFO uvicorn.access: 127.0.0.1:62646 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:32,526 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:32,731 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:32,957 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:33,167 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:33,370 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:33,595 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:33,808 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:34,012 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:34,209 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:34,345 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:34,347 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:34,350 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:34,351 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:34,438 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:34,660 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:34,882 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:35,100 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:35,311 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:35,518 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:35,730 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:35,932 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:36,151 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:36,351 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:36,353 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:36,354 INFO uvicorn.access: 127.0.0.1:63237 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:36,356 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:36,369 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:36,566 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:36,769 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:36,976 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:37,176 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:37,379 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:37,643 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:37,785 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:37,989 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:38,188 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:38,374 INFO uvicorn.access: 127.0.0.1:62564 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:38,377 INFO uvicorn.access: 127.0.0.1:63241 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:38,378 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:38,380 INFO uvicorn.access: 127.0.0.1:63237 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:38,420 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:38,623 INFO uvicorn.access: 127.0.0.1:63240 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:38,625 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:38,829 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:39,031 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:39,248 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:39,463 INFO uvicorn.access: 127.0.0.1:63237 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:39,672 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:39,864 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:40,083 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:40,298 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:40,379 INFO uvicorn.access: 127.0.0.1:63240 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:40,382 INFO uvicorn.access: 127.0.0.1:63241 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:40,383 INFO uvicorn.access: 127.0.0.1:62564 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:40,385 INFO uvicorn.access: 127.0.0.1:62662 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:40,499 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:40,700 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:40,911 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:41,123 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:41,326 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:41,550 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:41,764 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:41,921 INFO uvicorn.access: 127.0.0.1:63237 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:41,921 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:41,993 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:42,215 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:42,491 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:42,493 INFO uvicorn.access: 127.0.0.1:63240 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:42,494 INFO uvicorn.access: 127.0.0.1:62564 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:42,495 INFO uvicorn.access: 127.0.0.1:62662 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:42,497 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:42,655 INFO uvicorn.access: 127.0.0.1:63240 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:42,875 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:43,085 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:43,292 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:43,471 INFO uvicorn.access: 127.0.0.1:63240 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:43,472 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:43,508 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:43,732 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:43,960 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:44,174 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:44,374 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:44,407 INFO uvicorn.access: 127.0.0.1:63241 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:44,410 INFO uvicorn.access: 127.0.0.1:62662 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:44,412 INFO uvicorn.access: 127.0.0.1:62667 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:44,413 INFO uvicorn.access: 127.0.0.1:62676 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:44,481 INFO uvicorn.access: 127.0.0.1:62564 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:44,482 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:44,578 INFO uvicorn.access: 127.0.0.1:62662 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:44,797 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:45,009 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:45,216 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:45,435 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:45,643 INFO uvicorn.access: 127.0.0.1:63241 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:45,665 INFO uvicorn.access: 127.0.0.1:62662 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:45,669 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:45,863 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:46,068 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:46,277 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:46,430 INFO uvicorn.access: 127.0.0.1:62667 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:46,456 INFO uvicorn.access: 127.0.0.1:62676 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:46,463 INFO uvicorn.access: 127.0.0.1:62681 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:46,465 INFO uvicorn.access: 127.0.0.1:62682 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:46,506 INFO uvicorn.access: 127.0.0.1:62676 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:46,723 INFO uvicorn.access: 127.0.0.1:62676 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:46,731 INFO uvicorn.access: 127.0.0.1:63241 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:46,732 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:46,929 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:47,139 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:47,345 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:47,622 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:47,724 INFO uvicorn.access: 127.0.0.1:62676 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:47,725 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:47,749 INFO uvicorn.access: 127.0.0.1:62667 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:47,979 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:48,205 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:48,457 INFO uvicorn.access: 127.0.0.1:62682 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:48,458 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:48,493 INFO uvicorn.access: 127.0.0.1:62689 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:48,494 INFO uvicorn.access: 127.0.0.1:62688 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:48,497 INFO uvicorn.access: 127.0.0.1:62687 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:48,655 INFO uvicorn.access: 127.0.0.1:62687 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:48,719 INFO uvicorn.access: 127.0.0.1:62667 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:48,720 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:48,871 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:49,123 INFO uvicorn.access: 127.0.0.1:62688 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:49,317 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:49,523 INFO uvicorn.access: 127.0.0.1:62688 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:49,811 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:50,012 INFO uvicorn.access: 127.0.0.1:62688 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:50,089 INFO uvicorn.access: 127.0.0.1:62687 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:50,091 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:50,228 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:50,427 INFO uvicorn.access: 127.0.0.1:62688 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:50,478 INFO uvicorn.access: 127.0.0.1:62689 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:50,480 INFO uvicorn.access: 127.0.0.1:62682 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:50,487 INFO uvicorn.access: 127.0.0.1:62688 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:50,491 INFO uvicorn.access: 127.0.0.1:62681 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:50,645 INFO uvicorn.access: 127.0.0.1:62688 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:50,883 INFO uvicorn.access: 127.0.0.1:62688 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:51,101 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:51,315 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:51,542 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:51,753 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:51,951 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:52,178 INFO uvicorn.access: 127.0.0.1:62681 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:52,370 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:52,392 INFO uvicorn.access: 127.0.0.1:62688 - "GET /inspection-frame?format=jpg&quality=70&scale=0.6 HTTP/1.1" 500
+2026-02-01 22:56:52,393 ERROR uvicorn.error: Exception in ASGI application
+Traceback (most recent call last):
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\fastapi\routing.py", line 245, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\starlette\concurrency.py", line 32, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\raul_\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\main.py", line 2214, in get_inspection_frame
+    insert_defect(defect_event.dict())
+  File "C:\Users\raul_\OneDrive\Escritorio\Proyecto-3\backend\storage.py", line 191, in insert_defect
+    cur.execute(
+sqlite3.OperationalError: table defects has no column named ts
+2026-02-01 22:56:52,527 INFO uvicorn.access: 127.0.0.1:62681 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:52,530 INFO uvicorn.access: 127.0.0.1:62682 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:52,533 INFO uvicorn.access: 127.0.0.1:62689 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:52,543 INFO uvicorn.access: 127.0.0.1:62698 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:52,569 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:52,789 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:53,002 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:53,222 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:53,444 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:53,689 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:53,900 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:54,112 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:54,322 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:54,510 INFO uvicorn.access: 127.0.0.1:62698 - "GET /line/status HTTP/1.1" 200
+2026-02-01 22:56:54,513 INFO uvicorn.access: 127.0.0.1:62682 - "GET /alarms HTTP/1.1" 200
+2026-02-01 22:56:54,516 INFO uvicorn.access: 127.0.0.1:62689 - "GET /events?limit=50 HTTP/1.1" 200
+2026-02-01 22:56:54,519 INFO uvicorn.access: 127.0.0.1:62681 - "GET /sensors/status HTTP/1.1" 200
+2026-02-01 22:56:54,533 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:54,752 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:54,960 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200
+2026-02-01 22:56:56,095 INFO uvicorn.access: 127.0.0.1:62682 - "POST /sensors/encoder/pulse HTTP/1.1" 200

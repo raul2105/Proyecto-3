@@ -839,6 +839,39 @@ class DefectClassifier:
 
 ```
 
+### 2.3 Clasificación Operativa MAJOR/MICRO
+
+Además de la severidad (CRITICAL/MAJOR/MINOR), el sistema asigna una clase operativa:
+
+- **MAJOR**: todo defecto CRITICAL/MAJOR o defectos fuera del rango micro.
+- **MICRO**: defectos pequeños dentro de $0.05-0.08\,\text{mm}$ (si hay calibración), o por área px (fallback).
+
+Parámetros configurables:
+
+- `micro_defect_min_mm` (default 0.05)
+- `micro_defect_max_mm` (default 0.08)
+- `pixels_per_mm` (default 0.0 → usa fallback por área)
+- `micro_defect_max_area_px` (default 120.0)
+
+### 2.4 Métrica de Microdefectos por Metro
+
+El conteo se basa en longitud (no por etiqueta) usando ventana deslizante:
+
+$$micro\_rate = \frac{micro\_count\_window}{meters\_window}$$
+
+Parámetros:
+
+- `micro_window_m` (default 20 m)
+- `micro_step_m` (default 0.5 m)
+- `micro_min_m_for_alarm` (default 10 m)
+
+Reglas sugeridas:
+
+- **Amarillo**: $micro\_rate \ge 8/m$ durante $\ge 10\,m$
+- **Rojo**: $micro\_rate \ge 15/m$ durante $\ge 10\,m$
+- **Paro**: $micro\_rate \ge 25/m$ durante $\ge 10\,m$ **o** $micro\_count \ge 400$ en 20 m
+
+
 ---
 
 ### 2.2 Integración en Pipeline

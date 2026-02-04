@@ -30,7 +30,18 @@
     "critical_defect_area": 500.0,
     "defect_rate_per_frame": 3,
     "brightness_min": 10.0,
-    "brightness_max": 245.0
+    "brightness_max": 245.0,
+    "micro_window_m": 20.0,
+    "micro_step_m": 0.5,
+    "micro_rate_yellow": 8.0,
+    "micro_rate_red": 15.0,
+    "micro_rate_stop": 25.0,
+    "micro_count_stop": 400,
+    "micro_min_m_for_alarm": 10.0,
+    "micro_defect_min_mm": 0.05,
+    "micro_defect_max_mm": 0.08,
+    "pixels_per_mm": 0.0,
+    "micro_defect_max_area_px": 120.0
   },
   "sensor_config": {
     "label_pitch_m": 0.07,
@@ -39,8 +50,9 @@
     "fallback_encoder": true,
     "encoder_pitch_m": 0.15,
     "mm_per_tick": 0.0,
-    "repeat_mm": 0.0
+    "repeat_mm": 0.0,
+    "encoder_watchdog_ms": 1000
   },
-  "last_job_id": "",
-  "last_recipe": ""
+  "last_job_id": "JOB-20260202-045552",
+  "last_recipe": "Test"
 }

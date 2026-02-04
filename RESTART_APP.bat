@@ -10,6 +10,11 @@ echo [1/3] Closing Backend/Frontend windows...
 taskkill /FI "WINDOWTITLE eq Flexo Backend" /T /F >nul 2>&1
 taskkill /FI "WINDOWTITLE eq Flexo Frontend" /T /F >nul 2>&1
 
+:: Also free ports in case the window title doesn't match
+echo        Releasing ports 8001 (backend) and 5173 (frontend)...
+for /f "tokens=5" %%p in ('netstat -ano ^| findstr /R /C":8001 .*LISTENING"') do taskkill /PID %%p /T /F >nul 2>&1
+for /f "tokens=5" %%p in ('netstat -ano ^| findstr /R /C":5173 .*LISTENING"') do taskkill /PID %%p /T /F >nul 2>&1
+
 :: Small wait to ensure ports are released
 echo [2/3] Waiting for processes to stop...
 timeout /t 2 >nul

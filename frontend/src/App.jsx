@@ -62,6 +62,18 @@ function App() {
   const [encoderRunning, setEncoderRunning] = useState(false)
   const [mmPerTick, setMmPerTick] = useState(0)
   const [repeatMm, setRepeatMm] = useState(0)
+  const [encoderWatchdogMs, setEncoderWatchdogMs] = useState(1000)
+  const [microWindowM, setMicroWindowM] = useState(20)
+  const [microStepM, setMicroStepM] = useState(0.5)
+  const [microRateYellow, setMicroRateYellow] = useState(8)
+  const [microRateRed, setMicroRateRed] = useState(15)
+  const [microRateStop, setMicroRateStop] = useState(25)
+  const [microCountStop, setMicroCountStop] = useState(400)
+  const [microMinAlarmM, setMicroMinAlarmM] = useState(10)
+  const [microMinMm, setMicroMinMm] = useState(0.05)
+  const [microMaxMm, setMicroMaxMm] = useState(0.08)
+  const [pixelsPerMm, setPixelsPerMm] = useState(0)
+  const [microMaxAreaPx, setMicroMaxAreaPx] = useState(120)
 
   // Installer / PLC Settings
   const [plcEnabled, setPlcEnabled] = useState(false)
@@ -162,6 +174,41 @@ function App() {
         if (data.retention_policy) {
           setRetention(data.retention_policy)
         }
+        if (data.alarm_rules) {
+          if (typeof data.alarm_rules.micro_window_m === 'number') {
+            setMicroWindowM(data.alarm_rules.micro_window_m)
+          }
+          if (typeof data.alarm_rules.micro_step_m === 'number') {
+            setMicroStepM(data.alarm_rules.micro_step_m)
+          }
+          if (typeof data.alarm_rules.micro_rate_yellow === 'number') {
+            setMicroRateYellow(data.alarm_rules.micro_rate_yellow)
+          }
+          if (typeof data.alarm_rules.micro_rate_red === 'number') {
+            setMicroRateRed(data.alarm_rules.micro_rate_red)
+          }
+          if (typeof data.alarm_rules.micro_rate_stop === 'number') {
+            setMicroRateStop(data.alarm_rules.micro_rate_stop)
+          }
+          if (typeof data.alarm_rules.micro_count_stop === 'number') {
+            setMicroCountStop(data.alarm_rules.micro_count_stop)
+          }
+          if (typeof data.alarm_rules.micro_min_m_for_alarm === 'number') {
+            setMicroMinAlarmM(data.alarm_rules.micro_min_m_for_alarm)
+          }
+          if (typeof data.alarm_rules.micro_defect_min_mm === 'number') {
+            setMicroMinMm(data.alarm_rules.micro_defect_min_mm)
+          }
+          if (typeof data.alarm_rules.micro_defect_max_mm === 'number') {
+            setMicroMaxMm(data.alarm_rules.micro_defect_max_mm)
+          }
+          if (typeof data.alarm_rules.pixels_per_mm === 'number') {
+            setPixelsPerMm(data.alarm_rules.pixels_per_mm)
+          }
+          if (typeof data.alarm_rules.micro_defect_max_area_px === 'number') {
+            setMicroMaxAreaPx(data.alarm_rules.micro_defect_max_area_px)
+          }
+        }
       })
       .catch(err => console.error('Failed to load settings', err))
   }, [API_URL])
@@ -178,6 +225,7 @@ function App() {
           setEncoderPitch(data.sensor_config.encoder_pitch_m || 0)
           setMmPerTick(data.sensor_config.mm_per_tick || 0)
           setRepeatMm(data.sensor_config.repeat_mm || 0)
+          setEncoderWatchdogMs(data.sensor_config.encoder_watchdog_ms || 1000)
         }
       })
       .catch(err => console.error('Failed to load sensor config', err))
@@ -292,12 +340,24 @@ function App() {
         .catch(err => console.error('Failed to load events', err))
       fetch(`${API_URL}/sensors/status`)
         .then(res => res.json())
-        .then(data => setSensorStatus(data))
-        .catch(err => console.error('Failed to load sensors status', err))
+        .then(data => {
+          setSensorStatus(data)
+          setApiStatus('online')
+        })
+        .catch(err => {
+          setApiStatus('offline')
+          console.error('Failed to load sensors status', err)
+        })
       fetch(`${API_URL}/line/status`)
         .then(res => res.json())
-        .then(data => setLineStatus(data))
-        .catch(err => console.error('Failed to load line status', err))
+        .then(data => {
+          setLineStatus(data)
+          setApiStatus('online')
+        })
+        .catch(err => {
+          setApiStatus('offline')
+          console.error('Failed to load line status', err)
+        })
     }, 2000)
     return () => clearInterval(interval)
   }, [API_URL])
@@ -491,7 +551,18 @@ function App() {
         exposure: cameraExposure,
         roll_diameter_mm: clampNonNegative(rollDiameter, 0),
         core_diameter_mm: clampNonNegative(coreDiameter, 0),
-        material_thickness_mm: clampNonNegative(materialThickness, 0)
+        material_thickness_mm: clampNonNegative(materialThickness, 0),
+        micro_window_m: clampNonNegative(microWindowM, 20),
+        micro_step_m: clampNonNegative(microStepM, 0.5),
+        micro_rate_yellow: clampNonNegative(microRateYellow, 8),
+        micro_rate_red: clampNonNegative(microRateRed, 15),
+        micro_rate_stop: clampNonNegative(microRateStop, 25),
+        micro_count_stop: clampInt(microCountStop, 400),
+        micro_min_m_for_alarm: clampNonNegative(microMinAlarmM, 10),
+        micro_defect_min_mm: clampNonNegative(microMinMm, 0.05),
+        micro_defect_max_mm: clampNonNegative(microMaxMm, 0.08),
+        pixels_per_mm: clampNonNegative(pixelsPerMm, 0),
+        micro_defect_max_area_px: clampNonNegative(microMaxAreaPx, 120)
       })
     })
     await fetch(`${API_URL}/sensors/config`, {
@@ -504,7 +575,8 @@ function App() {
         fallback_encoder: fallbackEncoder,
         encoder_pitch_m: clampNonNegative(encoderPitch, 0),
         mm_per_tick: clampNonNegative(mmPerTick, 0),
-        repeat_mm: clampNonNegative(repeatMm, 0)
+        repeat_mm: clampNonNegative(repeatMm, 0),
+        encoder_watchdog_ms: clampInt(encoderWatchdogMs, 1000)
       })
     })
   }
@@ -796,10 +868,34 @@ function App() {
                       setEncoderPitch={setEncoderPitch}
                       mmPerTick={mmPerTick}
                       setMmPerTick={setMmPerTick}
+                      encoderWatchdogMs={encoderWatchdogMs}
+                      setEncoderWatchdogMs={setEncoderWatchdogMs}
                       encoderIntervalMs={encoderIntervalMs}
                       setEncoderIntervalMs={setEncoderIntervalMs}
                       encoderRunning={encoderRunning}
                       setEncoderRunning={setEncoderRunning}
+                      microWindowM={microWindowM}
+                      setMicroWindowM={setMicroWindowM}
+                      microStepM={microStepM}
+                      setMicroStepM={setMicroStepM}
+                      microRateYellow={microRateYellow}
+                      setMicroRateYellow={setMicroRateYellow}
+                      microRateRed={microRateRed}
+                      setMicroRateRed={setMicroRateRed}
+                      microRateStop={microRateStop}
+                      setMicroRateStop={setMicroRateStop}
+                      microCountStop={microCountStop}
+                      setMicroCountStop={setMicroCountStop}
+                      microMinAlarmM={microMinAlarmM}
+                      setMicroMinAlarmM={setMicroMinAlarmM}
+                      microMinMm={microMinMm}
+                      setMicroMinMm={setMicroMinMm}
+                      microMaxMm={microMaxMm}
+                      setMicroMaxMm={setMicroMaxMm}
+                      pixelsPerMm={pixelsPerMm}
+                      setPixelsPerMm={setPixelsPerMm}
+                      microMaxAreaPx={microMaxAreaPx}
+                      setMicroMaxAreaPx={setMicroMaxAreaPx}
                       onSave={handleSaveLineSettings}
                     />
                   ) : (
@@ -818,6 +914,30 @@ function App() {
                       setEncoderPitch={setEncoderPitch}
                       mmPerTick={mmPerTick}
                       setMmPerTick={setMmPerTick}
+                      encoderWatchdogMs={encoderWatchdogMs}
+                      setEncoderWatchdogMs={setEncoderWatchdogMs}
+                      microWindowM={microWindowM}
+                      setMicroWindowM={setMicroWindowM}
+                      microStepM={microStepM}
+                      setMicroStepM={setMicroStepM}
+                      microRateYellow={microRateYellow}
+                      setMicroRateYellow={setMicroRateYellow}
+                      microRateRed={microRateRed}
+                      setMicroRateRed={setMicroRateRed}
+                      microRateStop={microRateStop}
+                      setMicroRateStop={setMicroRateStop}
+                      microCountStop={microCountStop}
+                      setMicroCountStop={setMicroCountStop}
+                      microMinAlarmM={microMinAlarmM}
+                      setMicroMinAlarmM={setMicroMinAlarmM}
+                      microMinMm={microMinMm}
+                      setMicroMinMm={setMicroMinMm}
+                      microMaxMm={microMaxMm}
+                      setMicroMaxMm={setMicroMaxMm}
+                      pixelsPerMm={pixelsPerMm}
+                      setPixelsPerMm={setPixelsPerMm}
+                      microMaxAreaPx={microMaxAreaPx}
+                      setMicroMaxAreaPx={setMicroMaxAreaPx}
                       onSave={handleSaveLineSettings}
                     />
                   )}

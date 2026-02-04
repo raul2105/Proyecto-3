@@ -137,7 +137,18 @@ class SystemState:
         "critical_defect_area": 500.0,
         "defect_rate_per_frame": 3,
         "brightness_min": 10.0,
-        "brightness_max": 245.0
+        "brightness_max": 245.0,
+        "micro_window_m": 20.0,
+        "micro_step_m": 0.5,
+        "micro_rate_yellow": 8.0,
+        "micro_rate_red": 15.0,
+        "micro_rate_stop": 25.0,
+        "micro_count_stop": 400,
+        "micro_min_m_for_alarm": 10.0,
+        "micro_defect_min_mm": 0.05,
+        "micro_defect_max_mm": 0.08,
+        "pixels_per_mm": 0.0,
+        "micro_defect_max_area_px": 120.0
     }
     alarm_actions = {
         "critical_defect": ["tower_red", "buzzer", "plc_signal", "stop_line", "mark_segment"],
@@ -145,6 +156,10 @@ class SystemState:
         "deltae_out": ["tower_red", "buzzer", "plc_signal", "mark_segment"],
         "registration_lost": ["tower_red", "buzzer", "plc_signal", "stop_line"],
         "sensor_signal_lost": ["tower_red", "buzzer", "plc_signal", "stop_line"],
+        "micro_rate_yellow": ["tower_yellow", "mark_segment"],
+        "micro_rate_red": ["tower_red", "buzzer", "plc_signal", "mark_segment"],
+        "micro_rate_stop": ["tower_red", "buzzer", "plc_signal", "stop_line", "mark_segment"],
+        "encoder_lost": ["tower_yellow"],
         "cmark_missing": ["tower_red", "buzzer", "plc_signal"],
         "cmark_double": ["tower_red", "buzzer", "plc_signal"],
         "cmark_jitter": ["tower_red", "plc_signal"]
@@ -171,6 +186,12 @@ class SystemState:
         "deltae_sum": 0.0,
         "deltae_count": 0
     }
+    micro_defect_positions = deque(maxlen=20000)
+    micro_rate_last: float = 0.0
+    micro_count_window: int = 0
+    micro_alarm_level: str = "none"
+    last_micro_eval_m: float = 0.0
+    last_encoder_ticks: int = 0
     settings = {
         "use_simulator": True,
         "camera_id": None,
@@ -200,13 +221,15 @@ class SystemState:
         "fallback_encoder": True,
         "encoder_pitch_m": 0.0,
         "mm_per_tick": 0.0,
-        "repeat_mm": 0.0
+        "repeat_mm": 0.0,
+        "encoder_watchdog_ms": 1000
     }
     sensor_status = {
         "last_label_ts": None,
         "last_cmark_ts": None,
         "last_cmark_interval_ms": None,
-        "last_cmark_missing_ts": None
+        "last_cmark_missing_ts": None,
+        "last_encoder_ts": None
     }
     sensor_counters = {
         "label_count": 0,
@@ -347,6 +370,75 @@ def _defect_bucket(area: float) -> str:
     if area >= 200:
         return "medium"
     return "small"
+
+def _is_micro_defect(defect: dict) -> bool:
+    rules = state.alarm_rules
+    min_mm = float(rules.get("micro_defect_min_mm", 0.05) or 0.05)
+    max_mm = float(rules.get("micro_defect_max_mm", 0.08) or 0.08)
+    pixels_per_mm = float(rules.get("pixels_per_mm", 0.0) or 0.0)
+    max_area_px = float(rules.get("micro_defect_max_area_px", 120.0) or 120.0)
+    area = float(defect.get("area", 0.0) or 0.0)
+
+    if pixels_per_mm > 0:
+        w = float(defect.get("w", 0.0) or 0.0)
+        h = float(defect.get("h", 0.0) or 0.0)
+        if w <= 0 or h <= 0:
+            return 0 < area <= max_area_px
+        max_dim_mm = max(w, h) / pixels_per_mm
+        return min_mm <= max_dim_mm <= max_mm
+
+    return 0 < area <= max_area_px
+
+def _update_micro_rate(current_m: float) -> None:
+    rules = state.alarm_rules
+    window_m = max(0.1, float(rules.get("micro_window_m", 20.0) or 20.0))
+    step_m = max(0.05, float(rules.get("micro_step_m", 0.5) or 0.5))
+    min_alarm_m = max(0.0, float(rules.get("micro_min_m_for_alarm", 10.0) or 10.0))
+    rate_yellow = float(rules.get("micro_rate_yellow", 8.0) or 8.0)
+    rate_red = float(rules.get("micro_rate_red", 15.0) or 15.0)
+    rate_stop = float(rules.get("micro_rate_stop", 25.0) or 25.0)
+    count_stop = int(rules.get("micro_count_stop", 400) or 400)
+
+    if current_m - state.last_micro_eval_m < step_m:
+        return
+
+    state.last_micro_eval_m = current_m
+    window_start = current_m - window_m
+    while state.micro_defect_positions and state.micro_defect_positions[0] < window_start:
+        state.micro_defect_positions.popleft()
+
+    count = len(state.micro_defect_positions)
+    rate = count / window_m if window_m > 0 else 0.0
+    state.micro_count_window = count
+    state.micro_rate_last = rate
+
+    level = "none"
+    if current_m >= min_alarm_m:
+        if count >= count_stop or rate >= rate_stop:
+            level = "stop"
+        elif rate >= rate_red:
+            level = "red"
+        elif rate >= rate_yellow:
+            level = "yellow"
+
+    if level == "stop":
+        raise_alarm("micro_rate_stop", "critical", "Micro defect rate stop", {"rate_per_m": round(rate, 2), "count_window": count})
+        clear_alarm("micro_rate_red")
+        clear_alarm("micro_rate_yellow")
+    elif level == "red":
+        raise_alarm("micro_rate_red", "warning", "Micro defect rate high", {"rate_per_m": round(rate, 2), "count_window": count})
+        clear_alarm("micro_rate_yellow")
+        clear_alarm("micro_rate_stop")
+    elif level == "yellow":
+        raise_alarm("micro_rate_yellow", "warning", "Micro defect rate trending", {"rate_per_m": round(rate, 2), "count_window": count})
+        clear_alarm("micro_rate_red")
+        clear_alarm("micro_rate_stop")
+    else:
+        clear_alarm("micro_rate_yellow")
+        clear_alarm("micro_rate_red")
+        clear_alarm("micro_rate_stop")
+
+    state.micro_alarm_level = level
 
 def build_roll_report(roll_id: str):
     report = next((r for r in state.roll_reports if r.get("roll_id") == roll_id), None)
@@ -615,6 +707,17 @@ class AppSettings(BaseModel):
     start_with_last_job: bool = None
     core_diameter_mm: float = None
     material_thickness_mm: float = None
+    micro_window_m: Optional[float] = None
+    micro_step_m: Optional[float] = None
+    micro_rate_yellow: Optional[float] = None
+    micro_rate_red: Optional[float] = None
+    micro_rate_stop: Optional[float] = None
+    micro_count_stop: Optional[int] = None
+    micro_min_m_for_alarm: Optional[float] = None
+    micro_defect_min_mm: Optional[float] = None
+    micro_defect_max_mm: Optional[float] = None
+    pixels_per_mm: Optional[float] = None
+    micro_defect_max_area_px: Optional[float] = None
     plc_enabled: Optional[bool] = None
     plc_ip: Optional[str] = None
     plc_port: Optional[int] = None
@@ -646,6 +749,7 @@ class SensorConfig(BaseModel):
     encoder_pitch_m: float = 0.0
     mm_per_tick: float = 0.0
     repeat_mm: float = 0.0
+    encoder_watchdog_ms: int = 1000
 
     @validator("label_pitch_m", "encoder_pitch_m", "mm_per_tick", "repeat_mm", pre=True)
     def clamp_non_negative_float(cls, value):
@@ -667,6 +771,16 @@ class SensorConfig(BaseModel):
             number = int(float(value))
         except (TypeError, ValueError):
             return 20
+        return max(0, number)
+
+    @validator("encoder_watchdog_ms", pre=True)
+    def clamp_encoder_watchdog(cls, value):
+        if value is None:
+            return 1000
+        try:
+            number = int(float(value))
+        except (TypeError, ValueError):
+            return 1000
         return max(0, number)
 
 class FrameEnvelope(BaseModel):
@@ -1212,7 +1326,8 @@ def set_retention_policy(payload: RetentionPolicy):
 def get_settings():
     return {
         "settings": state.settings,
-        "retention_policy": state.retention_policy
+        "retention_policy": state.retention_policy,
+        "alarm_rules": state.alarm_rules
     }
 
 @app.post("/settings")
@@ -1230,6 +1345,28 @@ def update_settings(payload: AppSettings):
         state.settings["core_diameter_mm"] = payload.core_diameter_mm
     if payload.material_thickness_mm is not None:
         state.settings["material_thickness_mm"] = payload.material_thickness_mm
+    if payload.micro_window_m is not None:
+        state.alarm_rules["micro_window_m"] = payload.micro_window_m
+    if payload.micro_step_m is not None:
+        state.alarm_rules["micro_step_m"] = payload.micro_step_m
+    if payload.micro_rate_yellow is not None:
+        state.alarm_rules["micro_rate_yellow"] = payload.micro_rate_yellow
+    if payload.micro_rate_red is not None:
+        state.alarm_rules["micro_rate_red"] = payload.micro_rate_red
+    if payload.micro_rate_stop is not None:
+        state.alarm_rules["micro_rate_stop"] = payload.micro_rate_stop
+    if payload.micro_count_stop is not None:
+        state.alarm_rules["micro_count_stop"] = payload.micro_count_stop
+    if payload.micro_min_m_for_alarm is not None:
+        state.alarm_rules["micro_min_m_for_alarm"] = payload.micro_min_m_for_alarm
+    if payload.micro_defect_min_mm is not None:
+        state.alarm_rules["micro_defect_min_mm"] = payload.micro_defect_min_mm
+    if payload.micro_defect_max_mm is not None:
+        state.alarm_rules["micro_defect_max_mm"] = payload.micro_defect_max_mm
+    if payload.pixels_per_mm is not None:
+        state.alarm_rules["pixels_per_mm"] = payload.pixels_per_mm
+    if payload.micro_defect_max_area_px is not None:
+        state.alarm_rules["micro_defect_max_area_px"] = payload.micro_defect_max_area_px
     if payload.start_with_last_job is not None:
         state.settings["start_with_last_job"] = payload.start_with_last_job
     if payload.plc_enabled is not None:
@@ -1441,6 +1578,7 @@ def sensor_encoder_pulse():
     now_ts = time.time()
     state.sensor_counters["encoder_count"] += 1
     state.encoder_ticks += 1
+    state.sensor_status["last_encoder_ts"] = now_ts
     mm_per_tick = state.sensor_config.get("mm_per_tick", 0.0)
     if mm_per_tick > 0:
         state.current_mm += mm_per_tick
@@ -1578,7 +1716,11 @@ def classify_defect(defect_data: dict):
                 recipe_thresholds = {
                     "critical_area": recipe_data.get("defect_thresholds", {}).get("critical_area", 500),
                     "major_area": recipe_data.get("defect_thresholds", {}).get("major_area", 150),
-                    "critical_defect_types": ["missing_print", "register_error"]
+                    "critical_defect_types": ["missing_print", "register_error"],
+                    "micro_defect_min_mm": state.alarm_rules.get("micro_defect_min_mm", 0.05),
+                    "micro_defect_max_mm": state.alarm_rules.get("micro_defect_max_mm", 0.08),
+                    "pixels_per_mm": state.alarm_rules.get("pixels_per_mm", 0.0),
+                    "micro_defect_max_area_px": state.alarm_rules.get("micro_defect_max_area_px", 120.0)
                 }
             except Exception as recipe_err:
                 logger.warning(f"Could not load recipe for classification: {recipe_err}")
@@ -1591,6 +1733,7 @@ def classify_defect(defect_data: dict):
             "defect_id": classified.defect_id,
             "type": classified.type.value,
             "severity": classified.severity.value,
+            "operational_class": classified.operational_class.value,
             "area": classified.area_px,
             "confidence": classified.confidence_score,
             "rule": classified.rule_applied,
@@ -1845,21 +1988,36 @@ def get_inspection_frame(format: str = "jpg", quality: int = 70, scale: float = 
     # Run Diagnostics
     diag_metrics = Diagnostics.calculate_image_quality(live_img)
 
-    # Mock Production Stats
-    if state.use_simulator:
-        speed_m_min = 150.0 + random.uniform(-5, 5)
+    # Motion / speed (encoder is truth when available)
+    encoder_used = False
+    speed_m_min = 0.0
+    mm_per_tick = float(state.sensor_config.get("mm_per_tick", 0.0) or 0.0)
+    if mm_per_tick <= 0 and state.sensor_config.get("encoder_pitch_m", 0.0) > 0:
+        mm_per_tick = float(state.sensor_config["encoder_pitch_m"]) * 1000.0
+    last_encoder_ts = state.sensor_status.get("last_encoder_ts")
+    watchdog_ms = int(state.sensor_config.get("encoder_watchdog_ms", 1000) or 1000)
+
+    if last_encoder_ts and mm_per_tick > 0 and (now_ts - last_encoder_ts) * 1000 <= watchdog_ms:
+        delta_ticks = state.encoder_ticks - state.last_encoder_ticks
+        if delta_ticks > 0:
+            meters_inc = (delta_ticks * mm_per_tick) / 1000.0
+            dt = max(0.001, now_ts - state.last_frame_ts) if state.last_frame_ts else 0.05
+            speed_m_min = (meters_inc / dt) * 60.0 if dt > 0 else 0.0
+            state.current_mm += meters_inc * 1000.0
+            state.last_encoder_ticks = state.encoder_ticks
+            encoder_used = True
+        clear_alarm("encoder_lost")
     else:
-        # Simular encoder cuando se usa cámara real sin encoder físico
-        elapsed = time.time() - state.last_frame_ts if state.last_frame_ts else 0.05
-        state.last_frame_ts = time.time()
-        
-        # Velocidad simulada en modo cámara real
-        simulated_speed_mpm = state.settings.get("simulated_speed_mpm", 30.0)
-        distance_m = (simulated_speed_mpm / 60.0) * elapsed  # metros recorridos
-        state.current_mm += distance_m * 1000.0  # convertir a mm
-        state.speed_mpm = simulated_speed_mpm
-        state.encoder_ticks += int(distance_m * 100)  # 100 ticks por metro
-        speed_m_min = simulated_speed_mpm
+        if last_encoder_ts and (now_ts - last_encoder_ts) * 1000 > watchdog_ms:
+            raise_alarm("encoder_lost", "warning", "Encoder signal lost", {"since_ms": int((now_ts - last_encoder_ts) * 1000)})
+        else:
+            clear_alarm("encoder_lost")
+
+    if not encoder_used:
+        if state.use_simulator:
+            speed_m_min = 150.0 + random.uniform(-5, 5)
+        else:
+            speed_m_min = float(state.settings.get("simulated_speed_mpm", 30.0) or 30.0)
     
     ts_ms = int(time.time() * 1000)
 
@@ -1892,13 +2050,22 @@ def get_inspection_frame(format: str = "jpg", quality: int = 70, scale: float = 
         color_event_dict = color_event.dict()
         state.color_events.append(color_event_dict)
         insert_color_event(color_event_dict)
-    if state.last_frame_ts is not None:
+    if not encoder_used and state.last_frame_ts is not None:
         dt = max(0.0, now_ts - state.last_frame_ts)
         meters_inc = (speed_m_min / 60.0) * dt
         state.current_mm += meters_inc * 1000.0
         if (state.current_mm / 1000.0) // state.segment_length_m > state.segment_index:
             state.segment_index = int((state.current_mm / 1000.0) // state.segment_length_m)
     state.last_frame_ts = now_ts
+
+    current_m = max(0.0, state.current_mm / 1000.0)
+    for d in defects:
+        is_micro = _is_micro_defect(d)
+        d["operational_class"] = "micro" if is_micro else "major"
+        if is_micro:
+            state.micro_defect_positions.append(current_m)
+
+    _update_micro_rate(current_m)
 
     # Update roll diameter from length (simple winding model)
     core_d = float(state.settings.get("core_diameter_mm", 76.0) or 76.0)
@@ -2006,6 +2173,7 @@ def get_inspection_frame(format: str = "jpg", quality: int = 70, scale: float = 
             "segment_index": state.segment_index,
             "meter": round(state.current_mm / 1000.0, 2),
             "severity": severity,
+            "operational_class": d.get("operational_class", "major"),
             "type": "defect",
             "defect": d,
             "cavity_index": cavity_index
@@ -2040,7 +2208,7 @@ def get_inspection_frame(format: str = "jpg", quality: int = 70, scale: float = 
             crop_uri=crop_uri,
             frame_uri="memory://live",
             master_diff_uri="",
-            notes=""
+            notes=f"operational_class={d.get('operational_class', 'major')}"
         )
         state.defect_events.append(defect_event.dict())
         insert_defect(defect_event.dict())
@@ -2086,7 +2254,11 @@ def get_inspection_frame(format: str = "jpg", quality: int = 70, scale: float = 
             "encoder_ticks": state.encoder_ticks,
             "label_index": state.label_index,
             "roll_diameter_mm": state.settings.get("roll_diameter_mm"),
-            "registration_ok": state.inspector.last_registration_ok
+            "registration_ok": state.inspector.last_registration_ok,
+            "micro_rate_per_m": round(state.micro_rate_last, 3),
+            "micro_count_window": state.micro_count_window,
+            "micro_window_m": state.alarm_rules.get("micro_window_m", 20.0),
+            "micro_alarm_level": state.micro_alarm_level
         }
     }
 

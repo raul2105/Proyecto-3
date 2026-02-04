@@ -11,7 +11,7 @@ const LoginModal = ({ onLogin, apiUrl = 'http://127.0.0.1:8001' }) => {
         setLoading(true);
         setError(null);
         const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000); // 5 sec timeout
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 sec timeout (startup can be slow)
 
         try {
             console.log('Attempting login...');
@@ -34,9 +34,9 @@ const LoginModal = ({ onLogin, apiUrl = 'http://127.0.0.1:8001' }) => {
         } catch (err) {
             console.error('Login Error:', err);
             if (err.name === 'AbortError') {
-                setError('Login timed out. Server unresponsive.');
+                setError('Login timed out. Backend is not responding yet.');
             } else {
-                setError('Connection failed. Is backend running?');
+                setError('Connection failed. Check backend URL/port and CORS.');
             }
         } finally {
             setLoading(false);

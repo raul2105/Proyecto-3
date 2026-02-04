@@ -27,7 +27,9 @@ const SensorConfigFields = ({
   encoderPitch,
   setEncoderPitch,
   mmPerTick,
-  setMmPerTick
+  setMmPerTick,
+  encoderWatchdogMs,
+  setEncoderWatchdogMs
 }) => (
   <>
     <div className="form-group">
@@ -92,7 +94,155 @@ const SensorConfigFields = ({
         onChange={(e) => setMmPerTick(clampNonNegative(toFloat(e.target.value, 0), 0))}
       />
     </div>
+    <div className="form-group">
+      <label>Encoder Watchdog (ms)</label>
+      <input
+        type="number"
+        min="0"
+        value={encoderWatchdogMs}
+        onChange={(e) => setEncoderWatchdogMs(clampNonNegative(toInt(e.target.value, 1000), 1000))}
+      />
+    </div>
   </>
+)
+
+const MicroDefectFields = ({
+  microWindowM,
+  setMicroWindowM,
+  microStepM,
+  setMicroStepM,
+  microRateYellow,
+  setMicroRateYellow,
+  microRateRed,
+  setMicroRateRed,
+  microRateStop,
+  setMicroRateStop,
+  microCountStop,
+  setMicroCountStop,
+  microMinAlarmM,
+  setMicroMinAlarmM,
+  microMinMm,
+  setMicroMinMm,
+  microMaxMm,
+  setMicroMaxMm,
+  pixelsPerMm,
+  setPixelsPerMm,
+  microMaxAreaPx,
+  setMicroMaxAreaPx
+}) => (
+  <div className="card">
+    <h4>Micro Defect Rules</h4>
+    <div className="grid-two">
+      <div className="form-group">
+        <label>Window (m)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.1"
+          value={microWindowM}
+          onChange={(e) => setMicroWindowM(clampNonNegative(toFloat(e.target.value, 20), 20))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Step Update (m)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.05"
+          value={microStepM}
+          onChange={(e) => setMicroStepM(clampNonNegative(toFloat(e.target.value, 0.5), 0.5))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Min Length for Alarm (m)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.1"
+          value={microMinAlarmM}
+          onChange={(e) => setMicroMinAlarmM(clampNonNegative(toFloat(e.target.value, 10), 10))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Yellow Rate (/m)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.1"
+          value={microRateYellow}
+          onChange={(e) => setMicroRateYellow(clampNonNegative(toFloat(e.target.value, 8), 8))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Red Rate (/m)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.1"
+          value={microRateRed}
+          onChange={(e) => setMicroRateRed(clampNonNegative(toFloat(e.target.value, 15), 15))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Stop Rate (/m)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.1"
+          value={microRateStop}
+          onChange={(e) => setMicroRateStop(clampNonNegative(toFloat(e.target.value, 25), 25))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Stop Count (window)</label>
+        <input
+          type="number"
+          min="0"
+          value={microCountStop}
+          onChange={(e) => setMicroCountStop(clampNonNegative(toInt(e.target.value, 400), 400))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Micro Min Size (mm)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.01"
+          value={microMinMm}
+          onChange={(e) => setMicroMinMm(clampNonNegative(toFloat(e.target.value, 0.05), 0.05))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Micro Max Size (mm)</label>
+        <input
+          type="number"
+          min="0"
+          step="0.01"
+          value={microMaxMm}
+          onChange={(e) => setMicroMaxMm(clampNonNegative(toFloat(e.target.value, 0.08), 0.08))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Pixels per mm</label>
+        <input
+          type="number"
+          min="0"
+          step="0.1"
+          value={pixelsPerMm}
+          onChange={(e) => setPixelsPerMm(clampNonNegative(toFloat(e.target.value, 0), 0))}
+        />
+      </div>
+      <div className="form-group">
+        <label>Max Area Fallback (px²)</label>
+        <input
+          type="number"
+          min="0"
+          value={microMaxAreaPx}
+          onChange={(e) => setMicroMaxAreaPx(clampNonNegative(toFloat(e.target.value, 120), 120))}
+        />
+      </div>
+    </div>
+  </div>
 )
 
 export const SimulationLineSettings = ({
@@ -110,10 +260,34 @@ export const SimulationLineSettings = ({
   setEncoderPitch,
   mmPerTick,
   setMmPerTick,
+  encoderWatchdogMs,
+  setEncoderWatchdogMs,
   encoderIntervalMs,
   setEncoderIntervalMs,
   encoderRunning,
   setEncoderRunning,
+  microWindowM,
+  setMicroWindowM,
+  microStepM,
+  setMicroStepM,
+  microRateYellow,
+  setMicroRateYellow,
+  microRateRed,
+  setMicroRateRed,
+  microRateStop,
+  setMicroRateStop,
+  microCountStop,
+  setMicroCountStop,
+  microMinAlarmM,
+  setMicroMinAlarmM,
+  microMinMm,
+  setMicroMinMm,
+  microMaxMm,
+  setMicroMaxMm,
+  pixelsPerMm,
+  setPixelsPerMm,
+  microMaxAreaPx,
+  setMicroMaxAreaPx,
   onSave
 }) => (
   <div className="card">
@@ -134,6 +308,32 @@ export const SimulationLineSettings = ({
       setEncoderPitch={setEncoderPitch}
       mmPerTick={mmPerTick}
       setMmPerTick={setMmPerTick}
+      encoderWatchdogMs={encoderWatchdogMs}
+      setEncoderWatchdogMs={setEncoderWatchdogMs}
+    />
+    <MicroDefectFields
+      microWindowM={microWindowM}
+      setMicroWindowM={setMicroWindowM}
+      microStepM={microStepM}
+      setMicroStepM={setMicroStepM}
+      microRateYellow={microRateYellow}
+      setMicroRateYellow={setMicroRateYellow}
+      microRateRed={microRateRed}
+      setMicroRateRed={setMicroRateRed}
+      microRateStop={microRateStop}
+      setMicroRateStop={setMicroRateStop}
+      microCountStop={microCountStop}
+      setMicroCountStop={setMicroCountStop}
+      microMinAlarmM={microMinAlarmM}
+      setMicroMinAlarmM={setMicroMinAlarmM}
+      microMinMm={microMinMm}
+      setMicroMinMm={setMicroMinMm}
+      microMaxMm={microMaxMm}
+      setMicroMaxMm={setMicroMaxMm}
+      pixelsPerMm={pixelsPerMm}
+      setPixelsPerMm={setPixelsPerMm}
+      microMaxAreaPx={microMaxAreaPx}
+      setMicroMaxAreaPx={setMicroMaxAreaPx}
     />
     <div className="form-group">
       <label>Encoder Simulator (ms)</label>
@@ -168,6 +368,30 @@ export const LiveLineSettings = ({
   setEncoderPitch,
   mmPerTick,
   setMmPerTick,
+  encoderWatchdogMs,
+  setEncoderWatchdogMs,
+  microWindowM,
+  setMicroWindowM,
+  microStepM,
+  setMicroStepM,
+  microRateYellow,
+  setMicroRateYellow,
+  microRateRed,
+  setMicroRateRed,
+  microRateStop,
+  setMicroRateStop,
+  microCountStop,
+  setMicroCountStop,
+  microMinAlarmM,
+  setMicroMinAlarmM,
+  microMinMm,
+  setMicroMinMm,
+  microMaxMm,
+  setMicroMaxMm,
+  pixelsPerMm,
+  setPixelsPerMm,
+  microMaxAreaPx,
+  setMicroMaxAreaPx,
   onSave
 }) => (
   <div className="card">
@@ -188,6 +412,32 @@ export const LiveLineSettings = ({
       setEncoderPitch={setEncoderPitch}
       mmPerTick={mmPerTick}
       setMmPerTick={setMmPerTick}
+      encoderWatchdogMs={encoderWatchdogMs}
+      setEncoderWatchdogMs={setEncoderWatchdogMs}
+    />
+    <MicroDefectFields
+      microWindowM={microWindowM}
+      setMicroWindowM={setMicroWindowM}
+      microStepM={microStepM}
+      setMicroStepM={setMicroStepM}
+      microRateYellow={microRateYellow}
+      setMicroRateYellow={setMicroRateYellow}
+      microRateRed={microRateRed}
+      setMicroRateRed={setMicroRateRed}
+      microRateStop={microRateStop}
+      setMicroRateStop={setMicroRateStop}
+      microCountStop={microCountStop}
+      setMicroCountStop={setMicroCountStop}
+      microMinAlarmM={microMinAlarmM}
+      setMicroMinAlarmM={setMicroMinAlarmM}
+      microMinMm={microMinMm}
+      setMicroMinMm={setMicroMinMm}
+      microMaxMm={microMaxMm}
+      setMicroMaxMm={setMicroMaxMm}
+      pixelsPerMm={pixelsPerMm}
+      setPixelsPerMm={setPixelsPerMm}
+      microMaxAreaPx={microMaxAreaPx}
+      setMicroMaxAreaPx={setMicroMaxAreaPx}
     />
     <button onClick={onSave} className="btn-primary">Save Line Settings</button>
   </div>
